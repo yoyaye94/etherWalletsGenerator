@@ -1,0 +1,15 @@
+{
+  "name": "walletsgenerator",
+  "version": "1.0.0",
+  "description": "JS product to generate wallets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ethers": "^6.11.1",
+    "node-cron": "^3.0.3"
+  }
+}
