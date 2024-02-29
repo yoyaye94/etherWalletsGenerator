@@ -8,9 +8,14 @@ function getRandomSeconds() {
     return Math.floor(Math.random() * (config.maxIntervalSeconds - config.minIntervalSeconds + 1)) + config.minIntervalSeconds;
 }
 
-function createRandomWallet() {
+function createRandomWallet(walletCount) {
+    if (walletCount === 0) {
+        console.log('Wallet creation limit reached.');
+        return;
+    }
+
     const randomSeconds = getRandomSeconds();
-    console.log(`Chosen second for the next wallet creation: ${randomSeconds}`);
+    console.log(`Chosen second for wallet creation: ${randomSeconds}`);
 
     setTimeout(() => {
         console.log('Generating a new wallet...');
@@ -20,7 +25,7 @@ function createRandomWallet() {
 
         console.log('Wallet generated and saved.');
 
-        createRandomWallet(); // Schedule the creation of the next wallet
+        createRandomWallet(walletCount - 1); // Schedule the creation of the next wallet with reduced count
     }, randomSeconds * 1000); // Convert seconds to milliseconds
 }
 

@@ -1,5 +1,6 @@
 module.exports = {
-    numWallets: 20,    // Number of wallets to generate for the scheduleDailyTask.js
+    numWallets: 10,    // Number of wallets to generate
+
     minHour: 0,       // Minimum hour for random wallet generation for the scheduleDailyTask.js
     maxHour: 23,      // Maximum hour for random wallet generation for the scheduleDailyTask.js
     

@@ -1,10 +1,11 @@
 const createRandomWallet = require('./src/walletScheduler');
+const config = require('./config');
 
 // Log a message indicating that the script is starting
 console.log('Script started.');
 
 // Start the process by creating the first wallet
-createRandomWallet();
+createRandomWallet(config.numWallets);
 
 // Listen for SIGINT signal (Ctrl + C) and perform cleanup before exiting
 process.on('SIGINT', () => {
@@ -27,7 +28,7 @@ process.on('uncaughtException', (error) => {
 });
 
 // const scheduleDailyTask = require('./src/scheduleDailyTask');
-// const config = require('./config');
+
 
 
 // // Call scheduleDailyTask to generate a new random schedule for the current day
