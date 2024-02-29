@@ -1,3 +1,5 @@
+// This module generates a wallet in a random minute within random hour for the day. Min, max hour and number of wallets to create are defined in the config.js
+
 const cron = require('node-cron');
 const generateWallet = require('./generateWallet');
 const saveWallet = require('./saveWallet');

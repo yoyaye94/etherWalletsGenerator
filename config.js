@@ -1,6 +1,10 @@
 module.exports = {
-    numWallets: 20,    // Number of wallets to generate
-    minHour: 0,       // Minimum hour for random generation (e.g., 9 AM)
-    maxHour: 23,      // Maximum hour for random generation (e.g., 5 PM)
-    walletLocation: './walletsDirectory' // Relative path for the wallet directory
+    numWallets: 20,    // Number of wallets to generate for the scheduleDailyTask.js
+    minHour: 0,       // Minimum hour for random wallet generation for the scheduleDailyTask.js
+    maxHour: 23,      // Maximum hour for random wallet generation for the scheduleDailyTask.js
+    
+    walletLocation: './walletsDirectory', // Path for the wallet directory
+
+    minIntervalSeconds: 1, // Minimum number of seconds between each wallet creation for the walletScheduler.js
+    maxIntervalSeconds: 10 // Maximum number of seconds between each wallet creation for the walletScheduler.js
 };
